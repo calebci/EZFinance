@@ -16,7 +16,7 @@ function App() {
       <Button variant="outline-primary">Add Expense</Button>
     </Stack>
     <p>
-    <CircularProgressbar value={percentage} text={`${percentage}%`} />;
+    <CircularProgressbar value={percentage} text={`${percentage}%`} />
     </p>
     <div style={{
       display: "grid",
@@ -28,7 +28,7 @@ function App() {
       <BudgetCard name="Entertainment" amount={200} max={1000}></BudgetCard>
     </div>
   </Container>
-  );
+  )
 }
 
 export default App
