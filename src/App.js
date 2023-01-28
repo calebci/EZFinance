@@ -3,7 +3,10 @@ import './App.css';
 
 import { Button, Stack } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
+const percentage = 50;
 function App() {
   return (
   <Container className="my-4">
@@ -12,6 +15,9 @@ function App() {
       <Button variant="primary">Add Budget</Button>
       <Button variant="outline-primary">Add Expense</Button>
     </Stack>
+    <p>
+    <CircularProgressbar value={percentage} text={`${percentage}%`} />;
+    </p>
     <div style={{
       display: "grid",
       gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
