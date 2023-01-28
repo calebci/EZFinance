@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+import { Button, Stack } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Container className="my-4">
+    <Stack direction="horizontal" gap="2" className="mb-4">
+      <h1 className="me-auto">Budgets</h1>
+      <Button variant="primary">Add Budget</Button>
+      <Button variant="outline-primary">Add Expense</Button>
+    </Stack>
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+      gap: "1rem",
+      alignItems: "flex-start",
+    }}
+    ></div>
+  </Container>
   );
 }
 
-export default App;
+export default App
