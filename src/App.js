@@ -26,12 +26,12 @@ function App() {
 
   return (
     <>
-      <Container class="app">
-        <Stack class="stack">
-          <h1>EZ Budget</h1>
+      <Container>
+        <Stack>
+          <h1>EZ Budget Tracker</h1>
           <div class="button">
             <Button onClick={() => setShowAddBudgetModal(true)}>
-              Add New Budget
+              Add New Budget Category
             </Button>
           </div>
           {/* <Button onClick={openAddExpenseModal}>
