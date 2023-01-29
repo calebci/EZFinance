@@ -31,11 +31,11 @@ function Goal() {
   const [percBar, setBar] = useState(<CircularProgressbar></CircularProgressbar>);
   var excess = 0;
   var percentage = 0;
-  var total_budget = 500;
   var owe = 0;
 
   function submitValues() {
 
+    var total_budget = window.localStorage.getItem('max');
     excess = monthly_income - total_budget
     owe = (goal_cost - money_saved) / months_left
     var outcome = (owe / excess) * 100
@@ -76,6 +76,7 @@ function Goal() {
       value={percentage}
       text={`L`} styles = {buildStyles ({textSize: '16px', pathColor: 'red'})} />)
     }
+    console.log(total_budget)
   }
 
   return (
