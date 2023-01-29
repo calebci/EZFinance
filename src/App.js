@@ -220,11 +220,13 @@ function Tool() {
 
 function App() {
   return (
-    <div>
+    <div class = 'fancy'>
       <h1>EZ Finance</h1>
       <Tabs>
-        <div label="Tutorial">
-          Tutorial
+        <div label="Tutorial" style={{ padding: "10px 20px", textAlign: "center", color: "white" }}>
+          <p>
+          hello my name is john. I like tacos. good luck 
+          </p>
         </div>
         <div label="EZ Budget">
           <Tool/>
