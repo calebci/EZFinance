@@ -236,7 +236,7 @@ function App() {
                 Application Introduction
               </h1>
               <p>
-              By using Easy Finance, you can easily track your monthly expenditures, and determine if you can save for a particular item in a certain amount of time. 
+              By using EZ Finance, you can easily track your monthly expenditures, and determine if you can save for a particular item in a certain amount of time. 
               With the help of this app, you can have a better control over your finances, achieve your financial goals and make better financial decisions.              </p>
           </div>
           <div class="tutorial-2">
