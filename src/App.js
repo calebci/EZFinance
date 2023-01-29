@@ -221,7 +221,7 @@ function Tool() {
 function App() {
   return (
     <div>
-      <h1>EZ Finances</h1>
+      <h1>EZ Finance</h1>
       <Tabs>
         <div label="Tutorial">
           Tutorial
