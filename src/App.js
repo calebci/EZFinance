@@ -1,44 +1,41 @@
-import React from 'react';
-
-import Box from '@mui/material/Box';
-import { Button, Stack } from 'react-bootstrap';
+import React from 'react'
+import Box from '@mui/material/Box'
 import Container from 'react-bootstrap/Container'
-import 'react-circular-progressbar/dist/styles.css';
-import InputAdornment from '@mui/material/InputAdornment';
-import TextField from '@mui/material/TextField';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-
-import './App.css';
-
+import InputAdornment from '@mui/material/InputAdornment'
+import TextField from '@mui/material/TextField'
 import AddBudgetModal from "./components/AddBudgetModal"
 import AddExpenseModal from "./components/AddExpenseModal"
 import ViewExpensesModal from "./components/ViewExpensesModal"
 import BudgetCard from "./components/BudgetCard"
 import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard"
 import TotalBudgetCard from "./components/TotalBudgetCard"
+import Tabs from "./components/Tabs"
 import { useState } from "react"
 import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "./contexts/BudgetsContext"
-import Tabs from "./components/Tabs";
-// import useLocalStorage from useLocalStorage.js
+import { Button, Stack } from 'react-bootstrap';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
+import './App.css';
+import 'react-circular-progressbar/dist/styles.css'
 
 function Goal() {
 
-  const [goal_cost, set_goal_cost] = useState(0);
-  const [money_saved, set_money_saved] = useState(0);
-  const [monthly_income, set_monthly_income] = useState(0);
-  const [months_left, set_months_left] = useState(0);
-  // const [total_budget, useLocalStorage] = useState(0);
-  const [percBar, setBar] = useState(<CircularProgressbar></CircularProgressbar>);
-  var excess = 0;
-  var percentage = 0;
-  var total_budget = 500;
-  var owe = 0;
+  const [goal_cost, set_goal_cost] = useState(0)
+  const [money_saved, set_money_saved] = useState(0)
+  const [monthly_income, set_monthly_income] = useState(0)
+  const [months_left, set_months_left] = useState(0)
+  const [percBar, setBar] = useState(<CircularProgressbar></CircularProgressbar>)
+  var total_budget = window.localStorage.getItem('max');
+  var excess = 0
+  var percentage = 0
+  var total_budget = 500
+  var owe = 0
+  var outcome = 0
 
   function submitValues() {
 
     excess = monthly_income - total_budget
     owe = (goal_cost - money_saved) / months_left
-    var outcome = (owe / excess) * 100
+    outcome = (owe / excess) * 100
     percentage = outcome.toFixed(2)
 
     if (percentage <= 20) {
@@ -83,7 +80,7 @@ function Goal() {
     <Stack direction="horizontal" gap="2" className="mb-4">
       <h1 className="me-auto">EZ Goal Manager</h1>
     </Stack>
-    <div style = {{position: 'absolute', right: '30vw', bottom: '37vh', width: 400, height: 400}}>
+    <div style = {{position: 'absolute', right: '30vw', bottom: '20vh', width: 400, height: 400}}>
     {percBar};
     </div>
     <div style={{
@@ -139,7 +136,7 @@ function Goal() {
               set_months_left(e.target.value);
           }}
             InputProps={{
-              startAdornment: <InputAdornment position="start">$</InputAdornment>,
+              startAdornment: <InputAdornment position="start"></InputAdornment>,
             }}
           />
           <Button variant="primary" onClick={submitValues} style={{width: '27ch', height: '50px'}}>

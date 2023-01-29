@@ -17,6 +17,12 @@ h1 {
     align-items: flex-start;
 }
 
+.financeinputs {
+    display: grid;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
 .tab-list {
     border-bottom: 5px solid #ccc;
     padding-left: 0;
