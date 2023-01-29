@@ -1,5 +1,6 @@
 # EZ Finance
 Financial Literacy Application built for TAMUHack 2023
+
 EZ Finance helps kids, teens, and college students set and track financial goals while managing expenses. Saving made simple and fun. Get control of your money today!
 
 ## Inspiration
@@ -10,6 +11,7 @@ EZ Finance is perfect for kids, teens, and college students who want to learn ho
 
 ## How we built it
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 We built our application using react web framework and some essential web development languages such as html, css, and javascript. 
 
 ## Challenges we ran into
