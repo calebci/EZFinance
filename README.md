@@ -21,4 +21,4 @@ We're proud that we delivered a successful project within 24 hours. Our teamwork
 We learned how to development a web application using react, html and css. We each had different skills, so each of us had to learn something new such as utilizing GitHub, styling with css, and creating interactive elements with react.
 
 ## What's next for EZ Finance
-After learning more about web development and design we would like to develop our application into a fully functioning and hosted website, adding additional features along the way.
+Who knows?
