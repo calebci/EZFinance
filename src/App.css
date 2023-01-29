@@ -25,8 +25,7 @@ p {
 .tutorial-1 {
     background-color: #91b065;
     border-radius:25px;
-    border: 2px solid #6cad12;
-    border-width: thick;
+    border: 1px solid #6cad12;
     padding: 20px;
     margin: auto;
     margin-top: 25px;
@@ -34,13 +33,18 @@ p {
     text-align:center;
     height: 44vh;
     width: 90vw;
-  }
+    box-shadow: 3px 3px 0 3px #777;
+    transition: box-shadow 0.3s ease-in-out;
+}
 
-  .tutorial-2 {
+.tutorial-1:hover {
+    box-shadow: 5px 5px 0 3px black;
+}
+
+.tutorial-2 {
     background-color: #71a9fd ;
     border-radius:25px;
-    border: 2px solid #0d6efd ;
-    border-width: thick;
+    border: 1px solid #0d6efd ;
     padding: 20px;
     margin: auto;
     margin-top: 25px;
@@ -48,7 +52,13 @@ p {
     text-align:center;
     height: 38vh;
     width: 90vw;
-  }
+    box-shadow: 3px 3px 0 3px #777;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.tutorial-2:hover {
+    box-shadow: 5px 5px 0 3px black;
+}
 
 .tab-list {
     border-bottom: 5px solid #ccc;
@@ -70,4 +80,13 @@ p {
     background-color: white;
     border: solid gray;
     border-width: 1px 1px 0 1px;
+}
+
+.butt {
+    box-shadow: 2px 2px 0 0px #777;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.butt:hover {
+    box-shadow: 3px 3px 0 0px black;
 }

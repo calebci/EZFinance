@@ -146,7 +146,7 @@ function Goal() {
               startAdornment: <InputAdornment position="start"></InputAdornment>,
             }}
           />
-          <Button variant="primary" onClick={submitValues} style={{width: '27ch', height: '50px'}}>
+          <Button className="butt" variant="primary" onClick={submitValues} style={{width: '27ch', height: '50px'}}>
             Submit
           </Button>
         </Box>
@@ -173,7 +173,7 @@ function Tool() {
         <Stack>
           <h1>EZ Budget Tracker</h1>
           <div class="button">
-            <Button onClick={() => setShowAddBudgetModal(true)}>
+            <Button className="butt" onClick={() => setShowAddBudgetModal(true)}>
               Add New Budget Category
             </Button>
           </div>
