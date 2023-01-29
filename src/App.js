@@ -78,7 +78,7 @@ function Goal() {
   return (
   <Container className="my-4">
     <Stack direction="horizontal" gap="2" className="mb-4">
-      <h1 className="me-auto">EZ Goal Manager</h1>
+      <h1>EZ Goal Manager</h1>
     </Stack>
     <div style = {{position: 'absolute', right: '30vw', bottom: '20vh', width: 400, height: 400}}>
     {percBar};
@@ -220,7 +220,7 @@ function Tool() {
 
 function App() {
   return (
-    <div>
+    <div className="header">
       <h1>EZ Finance</h1>
       <Tabs>
         <div label="Tutorial">
