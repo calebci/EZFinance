@@ -64,7 +64,7 @@ function Goal() {
     if (percentage > 80 && percentage <= 100) {
       setBar(<CircularProgressbar
       value={percentage}
-      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'red'})} />)
+      text={`${percentage}%` } styles = {buildStyles ({textSize: '16px', pathColor: 'red'})} />)
     }
 
     if (percentage > 100) {
@@ -78,7 +78,7 @@ function Goal() {
   return (
   <Container className="my-4">
     <Stack direction="horizontal" gap="2" className="mb-4">
-      <h1 className="me-auto">EZ Goal Manager</h1>
+      <h1>EZ Goal Manager</h1>
     </Stack>
     <div style = {{position: 'absolute', right: '30vw', bottom: '20vh', width: 400, height: 400}}>
     {percBar};
@@ -220,7 +220,7 @@ function Tool() {
 
 function App() {
   return (
-    <div class = 'fancy'>
+    <div className="header">
       <h1>EZ Finance</h1>
       <Tabs>
         <div label="Tutorial" style={{ padding: "10px 20px", textAlign: "center", color: "white" }}>
