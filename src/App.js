@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Box from '@mui/material/Box';
 import { Button, Stack } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container'
 import 'react-circular-progressbar/dist/styles.css';
@@ -7,13 +7,15 @@ import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { useState } from 'react';
+// import useLocalStorage from useLocalStorage.js
 
-function App() {
+function Goal() {
 
   const [goal_cost, set_goal_cost] = useState(0);
   const [money_saved, set_money_saved] = useState(0);
   const [monthly_income, set_monthly_income] = useState(0);
   const [months_left, set_months_left] = useState(0);
+  // const [total_budget, useLocalStorage] = useState(0);
   const [percBar, setBar] = useState(<CircularProgressbar></CircularProgressbar>);
   var excess = 0;
   var percentage = 0;
@@ -69,9 +71,9 @@ function App() {
     <Stack direction="horizontal" gap="2" className="mb-4">
       <h1 className="me-auto">EZ-BUDGET</h1>
     </Stack>
-    <p>
+    <div style = {{position: 'absolute', right: '30vw', bottom: '37vh', width: 400, height: 400}}>
     {percBar};
-    </p>
+    </div>
     <div style={{
       display: "grid",
       gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
@@ -79,60 +81,62 @@ function App() {
       alignItems: "flex-start",
     }}
     >
-      <TextField
-          label="Goal Cost"
-          id="outlined-start-adornment"
-          sx={{ m: 1, width: '25ch' }}
-          value = {goal_cost}
-          onChange={(e) => {
-            set_goal_cost(e.target.value);
-        }}
-          InputProps={{
-            startAdornment: <InputAdornment position="start">$</InputAdornment>,
-          }}
-        />
+      <Box sx={{ display: 'flex', flexWrap: 'wrap'}}>
         <TextField
-          label="Money Saved"
-          id="outlined-start-adornment"
-          sx={{ m: 1, width: '25ch' }}
-          value = {money_saved}
-          onChange={(e) => {
-            set_money_saved(e.target.value);
-        }}
-          InputProps={{
-            startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            label="Goal Cost"
+            id="outlined-start-adornment"
+            sx={{ m: 1, width: '25ch' }}
+            value = {goal_cost}
+            onChange={(e) => {
+              set_goal_cost(e.target.value);
           }}
-        />
-        <TextField
-          label="Monthly Income"
-          id="outlined-start-adornment"
-          sx={{ m: 1, width: '25ch' }}
-          value = {monthly_income}
-          onChange={(e) => {
-            set_monthly_income(e.target.value);
-        }}
-          InputProps={{
-            startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            InputProps={{
+              startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            }}
+          />
+          <TextField
+            label="Money Saved"
+            id="outlined-start-adornment"
+            sx={{ m: 1, width: '25ch' }}
+            value = {money_saved}
+            onChange={(e) => {
+              set_money_saved(e.target.value);
           }}
-        />
-        <TextField
-          label="Months Left"
-          id="outlined-start-adornment"
-          sx={{ m: 1, width: '25ch' }}
-          value = {months_left}
-          onChange={(e) => {
-            set_months_left(e.target.value);
-        }}
-          InputProps={{
-            startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            InputProps={{
+              startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            }}
+          />
+          <TextField
+            label="Monthly Income"
+            id="outlined-start-adornment"
+            sx={{ m: 1, width: '25ch' }}
+            value = {monthly_income}
+            onChange={(e) => {
+              set_monthly_income(e.target.value);
           }}
-        />
-        <Button variant="primary" onClick={submitValues}>
-          Submit
-        </Button>
+            InputProps={{
+              startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            }}
+          />
+          <TextField
+            label="Months Left"
+            id="outlined-start-adornment"
+            sx={{ m: 1, width: '25ch' }}
+            value = {months_left}
+            onChange={(e) => {
+              set_months_left(e.target.value);
+          }}
+            InputProps={{
+              startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            }}
+          />
+          <Button variant="primary" onClick={submitValues} style={{width: '27ch', height: '50px'}}>
+            Submit
+          </Button>
+        </Box>
     </div>
   </Container>
   );
 }
 
-export default App
+export default Goal
