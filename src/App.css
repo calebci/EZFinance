@@ -1,5 +1,7 @@
 h1 {
     align-self: center;
+    font-style: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .button {
@@ -13,4 +15,24 @@ h1 {
     display: grid;
     gap: 1rem;
     align-items: flex-start;
+}
+
+.tab-list {
+    border-bottom: 5px solid #ccc;
+    padding-left: 0;
+}
+  
+.tab-list-item {
+    display: inline-block;
+    list-style: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+}
+  
+.tab-list-active {
+    background-color: #ccc;
+    border: solid #ccc;
+    border-width: 1px 1px 0 1px;
 }

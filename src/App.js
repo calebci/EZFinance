@@ -11,8 +11,28 @@ import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard"
 import TotalBudgetCard from "./components/TotalBudgetCard"
 import { useState } from "react"
 import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "./contexts/BudgetsContext"
+import Tabs from "./components/Tabs";
 
 function App() {
+  return (
+    <div>
+      <h1>EZ Finances</h1>
+      <Tabs>
+        <div label="Tutorial">
+          Tutorial
+        </div>
+        <div label="EZ Budget">
+          <Tool/>
+        </div>
+        <div label="EZ Goal">
+          Save
+        </div>
+      </Tabs>
+    </div>
+  );
+}
+
+function Tool() {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false)
   const [showAddExpenseModal, setShowAddExpenseModal] = useState(false)
   const [viewExpensesModalBudgetId, setViewExpensesModalBudgetId] = useState()
@@ -82,5 +102,5 @@ function App() {
   )
 }
 
-
 export default App
+//export { App } from './App';
