@@ -24,10 +24,8 @@ function Goal() {
   const [monthly_income, set_monthly_income] = useState(0)
   const [months_left, set_months_left] = useState(0)
   const [percBar, setBar] = useState(<CircularProgressbar></CircularProgressbar>)
-  var total_budget = window.localStorage.getItem('max');
   var excess = 0
   var percentage = 0
-  var total_budget = 500
   var owe = 0
   var outcome = 0
 
