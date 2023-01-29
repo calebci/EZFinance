@@ -12,10 +12,11 @@ EZ Finance is perfect for kids, teens, and college students who want to learn ho
 ## How we built it
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-We built our application using react web framework and some essential web development languages such as html, css, and javascript. 
+We built our application using Node.js, React.js, and other essential web development languages such as html, css, and javascript. 
 
 ## Challenges we ran into
-This was our first TAMUHack type of event, so we ran into challenges with starting a project like this from scratch and idea building. While coding we had trouble with positions the elements that we had thought through in a way befitting for our target audience.
+This was our first Hackathon type  event, so we ran into challenges with coming up with innovative ideas and starting a complex project like this from scratch. We ran into numerous issues while programming as we used frameworks that were all relatively new to us.
+
 ## Accomplishments that we're proud of
 We're proud that we delivered a successful project within 24 hours. Our teamwork was much better than any of us could have expected and we were able to establish a great system of collaboration. We are also proud of what we were able to teach each other and learn in a short amount of time.
 
