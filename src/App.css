@@ -1,0 +1,16 @@
+h1 {
+    align-self: center;
+}
+
+.button {
+    display: grid;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+  
+.budgetcard {
+    display: grid;
+    gap: 1rem;
+    align-items: flex-start;
+}
