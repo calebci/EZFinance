@@ -2,10 +2,7 @@ h1 {
     align-self: center;
     font-style: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.fancy {
-    
+    margin: 1rem;
 }
 
 .button {
@@ -35,7 +32,7 @@ p {
     margin-top: 25px;
     margin-bottom: 25px;
     text-align:center;
-    height: 40vh;
+    height: 44vh;
     width: 90vw;
   }
 
@@ -49,7 +46,7 @@ p {
     margin-top: 25px;
     margin-bottom: 25px;
     text-align:center;
-    height: 40vh;
+    height: 38vh;
     width: 90vw;
   }
 
