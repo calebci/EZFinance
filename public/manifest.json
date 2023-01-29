@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "EZ Finance",
+  "name": "Financial Literacy Application",
   "icons": [
     {
       "src": "favicon.ico",
