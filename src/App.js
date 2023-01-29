@@ -229,23 +229,25 @@ function App() {
                 Application Introduction
               </h1>
               <p>
-                This is
-              </p>
+              By using Easy Finance, you can easily track your monthly expenditures, and determine if you can save for a particular item in a certain amount of time. 
+              With the help of this app, you can have a better control over your finances, achieve your financial goals and make better financial decisions.              </p>
           </div>
           <div class="tutorial-2">
               <h1>
                 EZ Budget Tutorial
               </h1>
               <p>
-                This is
-              </p>
+              In the “EZ Budget” tab, you can set a monthly budget for each spending category and see how much you have left to spend for the month.              </p>
           </div>
           <div class="tutorial-1">
               <h1>
                 EZ Goal Tutorial
               </h1>
               <p>
-                This is
+              In the "EZ Goal" tab, you can set a specific savings goal, such as a new car or a vacation.
+              Enter the cost of the item and the date by which you want to purchase it.
+              Easy Finance will determine how much you need to save each month to reach your goal by that date and show you how much of 
+              your excess monthly cash it will take to reach that goal.
               </p>
           </div>
         </div>
