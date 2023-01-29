@@ -21,6 +21,10 @@ h1 {
     align-items: flex-start;
 }
 
+p {
+    font-size: 30px;
+}
+
 .tutorial-1 {
     background-color: #91b065;
     border-radius:25px;
