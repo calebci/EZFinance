@@ -24,6 +24,8 @@ function Goal() {
   const [monthly_income, set_monthly_income] = useState(0)
   const [months_left, set_months_left] = useState(0)
   const [percBar, setBar] = useState(<CircularProgressbar></CircularProgressbar>)
+  const [excessVal, setexcess] = useState(0)
+  const [oweVal, setoweVal] = useState(0)
   var excess = 0
   var percentage = 0
   var owe = 0
@@ -36,6 +38,8 @@ function Goal() {
     owe = (goal_cost - money_saved) / months_left
     outcome = (owe / excess) * 100
     percentage = outcome.toFixed(2)
+    setexcess(excess)
+    setoweVal(owe)
 
     if (percentage <= 20) {
       setBar(<CircularProgressbar
@@ -82,7 +86,9 @@ function Goal() {
     </Stack>
     <div style = {{position: 'absolute', right: '30vw', bottom: '20vh', width: 400, height: 400}}>
     {percBar};
-    <h2 style = {{position: 'absolute', right: '20vw', bottom: '1vh', width: 400, height: 400}}>Amount to save:</h2> 
+    </div>  
+    <div>
+    <h2 style = {{position: 'absolute', right: '29vw', bottom: '10vh'}}>Amount to save: {oweVal} per month</h2> 
     </div>
     <div style={{
       display: "grid",
