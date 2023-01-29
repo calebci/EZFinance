@@ -18,26 +18,28 @@ h1 {
 }
 
 .tutorial-1 {
-    background-color: #73Ad21;
+    background-color: #91b065;
     border-radius:25px;
-    border: 2px solid #73Ad21;
+    border: 2px solid #6cad12;
+    border-width: thick;
     padding: 20px;
     margin: auto;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     text-align:center;
     height: 40vh;
     width: 90vw;
   }
 
   .tutorial-2 {
-    background-color: #50b1c9;
+    background-color: #71a9fd ;
     border-radius:25px;
-    border: 2px solid #50b1c9;
+    border: 2px solid #0d6efd ;
+    border-width: thick;
     padding: 20px;
     margin: auto;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     text-align:center;
     height: 40vh;
     width: 90vw;
