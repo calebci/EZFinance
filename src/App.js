@@ -1,59 +1,29 @@
 import React from 'react';
 
 import { Button, Stack } from 'react-bootstrap';
-import Container from 'react-bootstrap/Container';
-import BudgetCard from './components/BudgetCard';
+import Container from 'react-bootstrap/Container'
 import 'react-circular-progressbar/dist/styles.css';
 import InputAdornment from '@mui/material/InputAdornment';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import TextField from '@mui/material/TextField';
-import FormControl from '@mui/material/FormControl';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { useState } from 'react';
 
-// var outcome = (owe / excess) * 100
-// var percentage = outcome.toFixed(2)
-// var percBar;
-
-// if (percentage <= 20) {
-//   percBar = <CircularProgressbar
-//   value={percentage}
-//   text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'green'})} />
-// }
-
-// if (percentage > 20 && percentage <= 40 ) {
-//   percBar = <CircularProgressbar
-//   value={percentage}
-//   text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'yellowgreen'})} />
-// }
-
-// if (percentage > 40 && percentage <= 60 ) {
-//   percBar = <CircularProgressbar
-//   value={percentage}
-//   text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'yellow'})} />
-// }
-
-// if (percentage > 60 && percentage <= 80) {
-//   percBar = <CircularProgressbar
-//   value={percentage}
-//   text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'orange'})} />
-// }
-
-// if (percentage > 80) {
-//   percBar = <CircularProgressbar
-//   value={percentage}
-//   text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'red'})} />
-// }
-
 function App() {
 
-  const [owe, setOwe] = useState(0);
-  const [excess, setExcess] = useState(0);
+  const [goal_cost, set_goal_cost] = useState(0);
+  const [money_saved, set_money_saved] = useState(0);
+  const [monthly_income, set_monthly_income] = useState(0);
+  const [months_left, set_months_left] = useState(0);
   const [percBar, setBar] = useState(<CircularProgressbar></CircularProgressbar>);
+  var excess = 0;
   var percentage = 0;
+  var total_budget = 500;
+  var owe = 0;
 
   function submitValues() {
 
+    excess = monthly_income - total_budget
+    owe = goal_cost / months_left
     var outcome = (owe / excess) * 100
     percentage = outcome.toFixed(2)
 
@@ -97,7 +67,7 @@ function App() {
   return (
   <Container className="my-4">
     <Stack direction="horizontal" gap="2" className="mb-4">
-      <h1 className="me-auto">Budgets</h1>
+      <h1 className="me-auto">EZ-BUDGET</h1>
     </Stack>
     <p>
     {percBar};
@@ -110,24 +80,48 @@ function App() {
     }}
     >
       <TextField
-          label="Owe"
+          label="Goal Cost"
           id="outlined-start-adornment"
           sx={{ m: 1, width: '25ch' }}
-          value = {owe}
+          value = {goal_cost}
           onChange={(e) => {
-            setOwe(e.target.value);
+            set_goal_cost(e.target.value);
         }}
           InputProps={{
             startAdornment: <InputAdornment position="start">$</InputAdornment>,
           }}
         />
         <TextField
-          label="Excess"
+          label="Money Saved"
           id="outlined-start-adornment"
           sx={{ m: 1, width: '25ch' }}
-          value = {excess}
+          value = {money_saved}
           onChange={(e) => {
-            setExcess(e.target.value);
+            set_money_saved(e.target.value);
+        }}
+          InputProps={{
+            startAdornment: <InputAdornment position="start">$</InputAdornment>,
+          }}
+        />
+        <TextField
+          label="Monthly Income"
+          id="outlined-start-adornment"
+          sx={{ m: 1, width: '25ch' }}
+          value = {monthly_income}
+          onChange={(e) => {
+            set_monthly_income(e.target.value);
+        }}
+          InputProps={{
+            startAdornment: <InputAdornment position="start">$</InputAdornment>,
+          }}
+        />
+        <TextField
+          label="Months Left"
+          id="outlined-start-adornment"
+          sx={{ m: 1, width: '25ch' }}
+          value = {months_left}
+          onChange={(e) => {
+            set_months_left(e.target.value);
         }}
           InputProps={{
             startAdornment: <InputAdornment position="start">$</InputAdornment>,
