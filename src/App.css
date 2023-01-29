@@ -17,11 +17,31 @@ h1 {
     align-items: flex-start;
 }
 
-.financeinputs {
-    display: grid;
-    gap: 1rem;
-    align-items: flex-start;
-}
+.tutorial-1 {
+    background-color: #73Ad21;
+    border-radius:25px;
+    border: 2px solid #73Ad21;
+    padding: 20px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align:center;
+    height: 40vh;
+    width: 90vw;
+  }
+
+  .tutorial-2 {
+    background-color: #50b1c9;
+    border-radius:25px;
+    border: 2px solid #50b1c9;
+    padding: 20px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align:center;
+    height: 40vh;
+    width: 90vw;
+  }
 
 .tab-list {
     border-bottom: 5px solid #ccc;

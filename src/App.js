@@ -224,7 +224,30 @@ function App() {
       <h1>EZ Finance</h1>
       <Tabs>
         <div label="Tutorial">
-          Tutorial
+          <div class="tutorial-1">
+              <h1>
+                Application Introduction
+              </h1>
+              <p>
+                This is
+              </p>
+          </div>
+          <div class="tutorial-2">
+              <h1>
+                EZ Budget Tutorial
+              </h1>
+              <p>
+                This is
+              </p>
+          </div>
+          <div class="tutorial-1">
+              <h1>
+                EZ Goal Tutorial
+              </h1>
+              <p>
+                This is
+              </p>
+          </div>
         </div>
         <div label="EZ Budget">
           <Tool/>
