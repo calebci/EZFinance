@@ -47,44 +47,50 @@ import { useState } from 'react';
 
 function App() {
 
-  const [owe, setOwe] = useState("");
-  const [excess, setExcess] = useState("");
+  const [owe, setOwe] = useState(0);
+  const [excess, setExcess] = useState(0);
+  const [percBar, setBar] = useState(<CircularProgressbar></CircularProgressbar>);
   var percentage = 0;
 
   function submitValues() {
-    
+
     var outcome = (owe / excess) * 100
     percentage = outcome.toFixed(2)
-    var percBar;
 
     if (percentage <= 20) {
-      percBar = <CircularProgressbar
+      setBar(<CircularProgressbar
       value={percentage}
-      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'green'})} />
+      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'green'})} />)
     }
 
     if (percentage > 20 && percentage <= 40 ) {
-      percBar = <CircularProgressbar
+      setBar(<CircularProgressbar
       value={percentage}
-      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'yellowgreen'})} />
+      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'yellowgreen'})} />)
     }
 
     if (percentage > 40 && percentage <= 60 ) {
-      percBar = <CircularProgressbar
+      setBar(<CircularProgressbar
       value={percentage}
-      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'yellow'})} />
+      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'yellow'})} />)
     }
 
     if (percentage > 60 && percentage <= 80) {
-      percBar = <CircularProgressbar
+      setBar(<CircularProgressbar
       value={percentage}
-      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'orange'})} />
+      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'orange'})} />)
     }
 
-    if (percentage > 80) {
-      percBar = <CircularProgressbar
+    if (percentage > 80 && percentage <= 100) {
+      setBar(<CircularProgressbar
       value={percentage}
-      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'red'})} />
+      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'red'})} />)
+    }
+
+    if (percentage > 100) {
+      setBar(<CircularProgressbar
+      value={percentage}
+      text={`L`} styles = {buildStyles ({textSize: '16px', pathColor: 'red'})} />)
     }
   }
 
@@ -94,7 +100,7 @@ function App() {
       <h1 className="me-auto">Budgets</h1>
     </Stack>
     <p>
-    <CircularProgressbar value={percentage} text={`${percentage}%`} />;
+    {percBar};
     </p>
     <div style={{
       display: "grid",
