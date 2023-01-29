@@ -82,6 +82,7 @@ function Goal() {
     </Stack>
     <div style = {{position: 'absolute', right: '30vw', bottom: '20vh', width: 400, height: 400}}>
     {percBar};
+    <h2 style = {{position: 'absolute', right: '20vw', bottom: '1vh', width: 400, height: 400}}>Amount to save:</h2> 
     </div>
     <div style={{
       display: "grid",
