@@ -7,7 +7,6 @@ import 'react-circular-progressbar/dist/styles.css';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import { useState } from 'react';
 
 import './App.css';
 
@@ -38,7 +37,7 @@ function Goal() {
   function submitValues() {
 
     excess = monthly_income - total_budget
-    owe = goal_cost / months_left
+    owe = (goal_cost - money_saved) / months_left
     var outcome = (owe / excess) * 100
     percentage = outcome.toFixed(2)
 
@@ -82,7 +81,7 @@ function Goal() {
   return (
   <Container className="my-4">
     <Stack direction="horizontal" gap="2" className="mb-4">
-      <h1 className="me-auto">EZ-BUDGET</h1>
+      <h1 className="me-auto">EZ Goal Manager</h1>
     </Stack>
     <div style = {{position: 'absolute', right: '30vw', bottom: '37vh', width: 400, height: 400}}>
     {percBar};
@@ -147,23 +146,8 @@ function Goal() {
             Submit
           </Button>
         </Box>
-
-function App() {
-  return (
-    <div>
-      <h1>EZ Finances</h1>
-      <Tabs>
-        <div label="Tutorial">
-          Tutorial
-        </div>
-        <div label="EZ Budget">
-          <Tool/>
-        </div>
-        <div label="EZ Goal">
-          Save
-        </div>
-      </Tabs>
     </div>
+  </Container>
   );
 }
 
@@ -235,6 +219,25 @@ function Tool() {
       />
     </>
   )
+}
+
+function App() {
+  return (
+    <div>
+      <h1>EZ Finances</h1>
+      <Tabs>
+        <div label="Tutorial">
+          Tutorial
+        </div>
+        <div label="EZ Budget">
+          <Tool/>
+        </div>
+        <div label="EZ Goal">
+          <Goal/>
+        </div>
+      </Tabs>
+    </div>
+  );
 }
 
 export default App
