@@ -25,7 +25,7 @@ function Goal() {
   function submitValues() {
 
     excess = monthly_income - total_budget
-    owe = goal_cost / months_left
+    owe = (goal_cost - money_saved) / months_left
     var outcome = (owe / excess) * 100
     percentage = outcome.toFixed(2)
 
