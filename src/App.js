@@ -24,6 +24,8 @@ function Goal() {
   const [monthly_income, set_monthly_income] = useState(0)
   const [months_left, set_months_left] = useState(0)
   const [percBar, setBar] = useState(<CircularProgressbar></CircularProgressbar>)
+  const [excessVal, setexcess] = useState(0)
+  const [oweVal, setoweVal] = useState(0)
   var excess = 0
   var percentage = 0
   var owe = 0
@@ -36,6 +38,8 @@ function Goal() {
     owe = (goal_cost - money_saved) / months_left
     outcome = (owe / excess) * 100
     percentage = outcome.toFixed(2)
+    setexcess(excess)
+    setoweVal(owe)
 
     if (percentage <= 20) {
       setBar(<CircularProgressbar
@@ -64,7 +68,7 @@ function Goal() {
     if (percentage > 80 && percentage <= 100) {
       setBar(<CircularProgressbar
       value={percentage}
-      text={`${percentage}%`} styles = {buildStyles ({textSize: '16px', pathColor: 'red'})} />)
+      text={`${percentage}%` } styles = {buildStyles ({textSize: '16px', pathColor: 'red'})} />)
     }
 
     if (percentage > 100) {
@@ -82,6 +86,9 @@ function Goal() {
     </Stack>
     <div style = {{position: 'absolute', right: '30vw', bottom: '20vh', width: 400, height: 400}}>
     {percBar};
+    </div>  
+    <div>
+    <h2 style = {{position: 'absolute', right: '29vw', bottom: '10vh'}}>Amount to save: {oweVal} per month</h2> 
     </div>
     <div style={{
       display: "grid",
@@ -229,23 +236,25 @@ function App() {
                 Application Introduction
               </h1>
               <p>
-                This is
-              </p>
+              By using Easy Finance, you can easily track your monthly expenditures, and determine if you can save for a particular item in a certain amount of time. 
+              With the help of this app, you can have a better control over your finances, achieve your financial goals and make better financial decisions.              </p>
           </div>
           <div class="tutorial-2">
               <h1>
                 EZ Budget Tutorial
               </h1>
               <p>
-                This is
-              </p>
+              In the “EZ Budget” tab, you can set a monthly budget for each spending category and see how much you have left to spend for the month.              </p>
           </div>
           <div class="tutorial-1">
               <h1>
                 EZ Goal Tutorial
               </h1>
               <p>
-                This is
+              In the "EZ Goal" tab, you can set a specific savings goal, such as a new car or a vacation.
+              Enter the cost of the item and the date by which you want to purchase it.
+              Easy Finance will determine how much you need to save each month to reach your goal by that date and show you how much of 
+              your excess monthly cash it will take to reach that goal.
               </p>
           </div>
         </div>
