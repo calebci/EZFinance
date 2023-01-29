@@ -233,27 +233,25 @@ function App() {
         <div label="Tutorial">
           <div class="tutorial-1">
               <h1>
-                Application Introduction
+                Introduction
               </h1>
               <p>
-              By using Easy Finance, you can easily track your monthly expenditures, and determine if you can save for a particular item in a certain amount of time. 
-              With the help of this app, you can have a better control over your finances, achieve your financial goals and make better financial decisions.              </p>
+              EZ Finance is perfect for kids, teens, and college students who want to learn how to manage their money. It's easy to use for managing your budgets, expenses, and tracking your financial goals all in one place. Get in control of your money and start planning for your financial future!
+              </p>
           </div>
           <div class="tutorial-2">
               <h1>
-                EZ Budget Tutorial
+                EZ Budget
               </h1>
               <p>
-              In the “EZ Budget” tab, you can set a monthly budget for each spending category and see how much you have left to spend for the month.              </p>
+              Using EZ Budget, you can customize budgeting categories, manage your expenses, and see how much you have spent each month and how much you have left to spend for the month. </p>
           </div>
           <div class="tutorial-1">
               <h1>
-                EZ Goal Tutorial
+                EZ Goal
               </h1>
               <p>
-              In the "EZ Goal" tab, you can set a specific savings goal, such as a new car or a vacation.
-              Enter the cost of the item and the date by which you want to purchase it.
-              Easy Finance will determine how much you need to save each month to reach your goal by that date and show you how much of 
+              Using EZ Goal, set a financial goal and input your income, money already saved, and desired time frame. The tool will determine how much you need to save each month to reach your goal by that date, with a visual of the percentage of
               your excess monthly cash it will take to reach that goal.
               </p>
           </div>
