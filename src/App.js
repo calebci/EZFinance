@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 
 import { Button, Stack } from "react-bootstrap"
 import Container from "react-bootstrap/Container"
@@ -25,28 +26,22 @@ function App() {
 
   return (
     <>
-      <Container className="my-4">
-        <Stack direction="horizontal" gap="2" className="mb-4">
-          <h1 className="me-auto">EZ Budget</h1>
-          <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>
-            Add Budget
-          </Button>
-          <Button variant="outline-primary" onClick={openAddExpenseModal}>
-            Add Expense
-          </Button>
+      <Container class="app">
+        <Stack class="stack">
+          <h1>EZ Budget</h1>
+          <div class="button">
+            <Button onClick={() => setShowAddBudgetModal(true)}>
+              Add New Budget
+            </Button>
+          </div>
+          {/* <Button onClick={openAddExpenseModal}>
+            Add New Expense
+          </Button> */}
         </Stack>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-            gap: "1rem",
-            alignItems: "flex-start",
-          }}
-        >
+        <div class="budgetcard">
           {budgets.map(budget => {
             const amount = getBudgetExpenses(budget.id).reduce(
-              (total, expense) => total + expense.amount,
-              0
+              (total, expense) => total + expense.amount, 0
             )
             return (
               <BudgetCard
@@ -86,5 +81,6 @@ function App() {
     </>
   )
 }
+
 
 export default App

@@ -1,0 +1,26 @@
+.app {
+    margin: 1.5rem 0;
+}
+  
+.stack {
+    margin-bottom: 1.5rem;
+}
+  
+h1 {
+    display: grid;
+    gap: 1rem;
+    align-self: center;
+}
+
+.button {
+    display: grid;
+    margin: 1.5rem;
+    gap: 1rem;
+    align-items: flex-start;
+}
+  
+.budgetcard {
+    display: grid;
+    gap: 1rem;
+    align-items: flex-start;
+}
