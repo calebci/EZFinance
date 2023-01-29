@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Button, Stack } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
-import { CircleProgress } from 'react-gradient-progress';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
