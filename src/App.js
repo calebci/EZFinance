@@ -23,7 +23,7 @@ function Goal() {
   const [money_saved, set_money_saved] = useState(0)
   const [monthly_income, set_monthly_income] = useState(0)
   const [months_left, set_months_left] = useState(0)
-  const [percBar, setBar] = useState(<CircularProgressbar></CircularProgressbar>)
+  const [percBar, setBar] = useState(<CircularProgressbar styles = {buildStyles ({pathColor: 'grey'})}></CircularProgressbar>)
   const [excessVal, setexcess] = useState(0)
   const [oweVal, setoweVal] = useState(0)
   var excess = 0
@@ -85,7 +85,7 @@ function Goal() {
       <h1>EZ Goal Manager</h1>
     </Stack>
     <div style = {{position: 'absolute', right: '30vw', bottom: '20vh', width: 400, height: 400}}>
-    {percBar};
+    {percBar}
     </div>  
     <div>
     <h2 style = {{position: 'absolute', right: '29vw', bottom: '10vh'}}>Amount to save: {oweVal} per month</h2> 
